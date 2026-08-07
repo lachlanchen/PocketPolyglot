@@ -1,0 +1,4319 @@
+{
+  "schema_version": 1,
+  "book_id": "hideyoshi-berry",
+  "stage": "parsed_paragraphs",
+  "source_markdown": "books/hideyoshi-berry/work/source-extraction/parsed-before-repairs.md",
+  "source_sha256": "a1ddce71910be0f0067f20bc6295de30e8f45784df38f78756098d4cfbd04d6d",
+  "generated_at": "2026-08-07T15:02:58.999943+00:00",
+  "accepted_confidences": [
+    "high"
+  ],
+  "audit_paths": [
+    "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+    "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+    "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+    "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+    "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+    "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+    "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+  ],
+  "review_decisions": "books/hideyoshi-berry/work/source-qa-v3/reviewer-decisions.json",
+  "rejected_repairs": [
+    {
+      "before": "lawless- ness",
+      "after": "lawlessness",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json"
+    },
+    {
+      "before": "became\nHideyoshi's",
+      "after": "became Hideyoshi's",
+      "reason": "The paragraph parser already joins this proven page continuation; parsed ledgers intentionally reject multiline rules.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json"
+    },
+    {
+      "before": "fi- nally",
+      "after": "finally",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json"
+    },
+    {
+      "before": "sue- ceeded",
+      "after": "succeeded",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json"
+    },
+    {
+      "before": "lawless-ness",
+      "after": "lawlessness",
+      "reason": "The parser represents this page-break artifact as lawless- ness; the visually verified manual repair targets the actual parsed text.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json"
+    },
+    {
+      "before": "regis- tered",
+      "after": "registered",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json"
+    },
+    {
+      "before": "atti- tudes",
+      "after": "attitudes",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json"
+    },
+    {
+      "before": "ended at the Oda borders\nSometime",
+      "after": "ended at the Oda borders.\nSometime",
+      "reason": "This source-page punctuation repair is applied before parsing with an exact raw replacement.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json"
+    },
+    {
+      "before": "1548. 42",
+      "after": "1548. [42]",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json"
+    },
+    {
+      "before": "No- bunaga",
+      "after": "Nobunaga",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "op- ponents",
+      "after": "opponents",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "mil- itant",
+      "after": "militant",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "ex- posed",
+      "after": "exposed",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "righteous- ness",
+      "after": "righteousness",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "Hi- deyoshi's campaigns",
+      "after": "Hideyoshi's campaigns",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "never re- ! axed",
+      "after": "never relaxed",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "No- bunaga's death",
+      "after": "Nobunaga's death",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "construe- tion",
+      "after": "construction",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "might well have re- treated",
+      "after": "might well have retreated",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "the pre- tense of good stewardship",
+      "after": "the pretense of good stewardship",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "subse- quent",
+      "after": "subsequent",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "the Mori, Ko- bayakawa, and Uesugi",
+      "after": "the Mōri, Kobayakawa, and Uesugi",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json"
+    },
+    {
+      "before": "sub- sided",
+      "after": "subsided",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "pre- sided",
+      "after": "presided",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "[him)",
+      "after": "[him]",
+      "reason": "The candidate omits the word for and does not occur; the manual visual repair targets the complete printed phrase [for him).",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "readi- ness",
+      "after": "readiness",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "I able e ] i. I Part ot a kenchi register from 1594.",
+      "after": "Table 1. Part of a kenchi register from 1594.",
+      "reason": "The rebuilt table extractor now emits a slightly different damaged caption; the source-page-proven caption is repaired exactly before parsing.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "de- scription",
+      "after": "description",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "regis- tries",
+      "after": "registries",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "rela- tions",
+      "after": "relations",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "some- what",
+      "after": "somewhat",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "Mas hi ta Uemon no Jo",
+      "after": "Mashita Uemon no Jō",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "Hi- deyoshi's",
+      "after": "Hideyoshi's",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json"
+    },
+    {
+      "before": "To The accounts",
+      "after": "The accounts",
+      "reason": "A source-page reconstruction restores the preceding citation and paragraph boundary instead of deleting To in isolation.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "The claimed at least 62,120 men from twenty-eight daimyo for that work. It have ordered",
+      "after": "I have ordered",
+      "reason": "The proposed replacement deletes two valid sentences; the passage is reconstructed from the printed page before parsing.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "ac- tivity",
+      "after": "activity",
+      "reason": "This raw extraction defect is repaired before parsing with an exact source replacement.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "Konan [south Vietnam)",
+      "after": "Konan [south Vietnam]",
+      "reason": "Visual review also recovered the missing macron; the accepted manual repair is Kōnan [south Vietnam].",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "Tonkin [north Vietnam]",
+      "after": "Tonkin [north Vietnam]",
+      "reason": "No-op suggestion; the source text is already correct.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "specifi- cally",
+      "after": "specifically",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "commis- sioner",
+      "after": "commissioner",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "Hideyoshi's dis- posal",
+      "after": "Hideyoshi's disposal",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "out- side their own domains",
+      "after": "outside their own domains",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "domainal man- agement",
+      "after": "domainal management",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "land J. nd power",
+      "after": "land and power",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json"
+    },
+    {
+      "before": "Patron- age",
+      "after": "Patronage",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "court. 18 Months",
+      "after": "court. [18] Months",
+      "reason": "The audit attached note 18 to the wrong sentence; physical PDF page 195 places it after military guests, repaired by the manual visual ledger.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "worn- enfolk",
+      "after": "womenfolk",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "Ashikaga.Yoshimasa's",
+      "after": "Ashikaga Yoshimasa's",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "as- sert",
+      "after": "assert",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "### Tokugawa Ieyasu continued:",
+      "after": "Tokugawa Ieyasu continued:",
+      "reason": "This structural de-heading is applied during line normalization, before the parsed repair ledger.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "him- self",
+      "after": "himself",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "screens. s[1] These",
+      "after": "screens. [51] These",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "22. 5 kilometers",
+      "after": "22.5 kilometers",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "3. 6 to 18 meters",
+      "after": "3.6 to 18 meters",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "restora- tion",
+      "after": "restoration",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json"
+    },
+    {
+      "before": "atten- tion",
+      "after": "attention",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    },
+    {
+      "before": "par-\nticipated",
+      "after": "participated",
+      "reason": "The source parser already resolves this line-end hyphenation; parsed ledgers intentionally reject multiline rules.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    },
+    {
+      "before": "existence. 43",
+      "after": "existence. [43]",
+      "reason": "This candidate does not occur in the extracted body or the printed passage and is an unsupported audit hallucination.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    },
+    {
+      "before": "sue- cession",
+      "after": "succession",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    },
+    {
+      "before": "po- litically",
+      "after": "politically",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    },
+    {
+      "before": "cen- tury",
+      "after": "century",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    },
+    {
+      "before": "Saka Castle and Hōjō Ujimasa—they also describe his mortuary temple.",
+      "after": "Saka Castle and Hōjō Ujimasa—they also describe his mortuary temple.",
+      "reason": "No-op suggestion; the entire duplicated fragment is removed by a source-page exact replacement.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    },
+    {
+      "before": "Ko- rean",
+      "after": "Korean",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    },
+    {
+      "before": "con- tours",
+      "after": "contours",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    },
+    {
+      "before": "lean- ings-those",
+      "after": "leanings—those",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text.",
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json"
+    }
+  ],
+  "superseded_repairs": [
+    {
+      "before": "Honnöji",
+      "after": "Honnōji",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same temple is consistently “Honnōji” elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "superseded_by_before": "Honnöji incident",
+      "superseded_by_after": "Honnōji incident"
+    },
+    {
+      "before": "Etchii",
+      "after": "Etchū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The province is repeatedly spelled “Etchū” elsewhere in the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "superseded_by_before": "Shikoku, Etchii, and Kii",
+      "superseded_by_after": "Shikoku, Etchū, and Kii"
+    }
+  ],
+  "repairs": [
+    {
+      "before": "included Ishida Mitsunari, Mashita Nagamori, Natsuka Masaie, Maeda Gen'i, and Asano Nagamasa. 96",
+      "after": "included Ishida Mitsunari, Mashita Nagamori, Natsuka Masaie, Maeda Gen'i, and Asano Nagamasa.[96]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "tairo issued few corporate documents after 1595, and none unrelated to Hideyori, a second",
+      "after": "tairō issued few corporate documents after 1595, and none unrelated to Hideyori,[95] a second",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron and omitted brackets around the note marker.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "his men-each, perhaps, conceived by Hideyoshi as discreteformed a collective settlement",
+      "after": "his men—each, perhaps, conceived by Hideyoshi as discrete—formed a collective settlement",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Two extraction-damaged em dashes, one of which fused adjacent words.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Those branch temples [of the Shinshū sect] which have harbored you in the past] shall",
+      "after": "Those branch temples [of the Shinshū sect] which have harbored you [in the past] shall",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 80 places the opening editorial bracket before in the past.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Tenshō 12 [[1584]), seventh month, eighteenth day Hideyoshi's monogram]",
+      "after": "Tenshō 12 [1584], seventh month, eighteenth day [Hideyoshi's monogram]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 97 prints the western year and Hideyoshi's monogram as two separate square-bracket annotations.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Bad he has called good, false he has called genuine.\" 50",
+      "after": "Bad he has called good, false he has called genuine.\" [50]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "land outside their own domains. 91 Although",
+      "after": "land outside their own domains.[91] Although",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number; adjacent notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "every paddy and dry field. The seizure",
+      "after": "every paddy and dry field]. The seizure",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "The editorial insertion beginning “[the holder” lacks its closing bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "passed [ since the Kiyosu conference]",
+      "after": "passed [since the Kiyosu conference]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space immediately after an editorial opening bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "retainers I shall be found] negligent",
+      "after": "retainers [shall be found] negligent",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "The opening editorial bracket was misrecognized as capital I.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "performing no before daimyo audiences",
+      "after": "performing nō before daimyo audiences",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron in the name of the Japanese dramatic form.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "foundations-has been demolished.\"61",
+      "after": "foundations—has been demolished.\"[61]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "The parenthetical dash and bracketed note marker were both damaged during extraction.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "campaign in Oshii [northern Japan]",
+      "after": "campaign in Ōshū [northern Japan]",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 122 clearly prints Ōshū.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[roughly sewn mats or rice straw).",
+      "after": "[roughly sewn mats or rice straw].",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with a parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi's intentions' correctly",
+      "after": "Hideyoshi's intentions correctly",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious apostrophe after a plural noun.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ consistent with your standing]",
+      "after": "[consistent with your standing]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 161 has no space after the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the Mori, Kobayakawa, and Uesugi",
+      "after": "the Mōri, Kobayakawa, and Uesugi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF pages 98-99 and the book's repeated spelling establish the Mōri house; page joining already repaired Kobayakawa.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "both the lozama and the Tokugawa",
+      "after": "both the tozama and the Tokugawa",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "The term appears repeatedly as “tozama”; lowercase l was substituted for t.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "within the decade. 25 Hideyoshi",
+      "after": "within the decade. [25] Hideyoshi",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Footnote 25 lost its brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi' s negotiating style",
+      "after": "Hideyoshi's negotiating style",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Mashita Uemon no Jō [Nagamori)",
+      "after": "Mashita Uemon no Jō [Nagamori]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "interlocutors of the 56 house",
+      "after": "interlocutors of the Sō house",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The passage concerns the Sō house of Tsushima; OCR rendered Sō as 56.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "banquets and no presentations",
+      "after": "banquets and nō presentations",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 234 clearly prints the theatrical term nō.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "at-\" all in that neighborhood",
+      "after": "at—\"all in that neighborhood",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 123 (printed page 107) clearly prints an em dash before the quotation and no space after its opening mark.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "The Otomo were already allied",
+      "after": "The Ōtomo were already allied",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same house is repeatedly spelled “Ōtomo.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Konoe, khijo, and Takatsukasa",
+      "after": "Konoe, Ichijō, and Takatsukasa",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The corrupted item is Ichijō, one of the five go-sekke and explicitly listed in that form later.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the few-large and successful",
+      "after": "the few—large and successful",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 40 clearly prints an em dash after few.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "transcend himself his vanity",
+      "after": "transcend himself—his vanity",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 23 clearly prints an em dash after himself.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ōta Gyiiichi's Taih: r gunki",
+      "after": "Ōta Gyūichi's Taikō gunki",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 235 clearly prints Ōta Gyūichi's Taikō gunki.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "with the Hojo and the Takeda",
+      "after": "with the Hōjō and the Takeda",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same house name repeatedly appears as “Hōjō.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "dry fields... I were] wasted",
+      "after": "dry fields... [were] wasted",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "The opening editorial bracket was misrecognized as capital I.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "89 Hideyoshi attacked piracy",
+      "after": "[89] Hideyoshi attacked piracy",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number; adjacent notes consistently use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Yoshida shrine. 58 Contained",
+      "after": "Yoshida shrine. [58] Contained",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number should match surrounding bracketed note markers.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ of the Lord of the Tenka]",
+      "after": "[of the Lord of the Tenka]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 108 has no space after the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "kokujin-men of the province",
+      "after": "kokujin—men of the province",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "An explanatory dash was misrecognized as an in-word hyphen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "classes-noble and religious",
+      "after": "classes—noble and religious",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "An explanatory dash was misrecognized as an in-word hyphen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "with the Hojo in offensives",
+      "after": "with the Hōjō in offensives",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same house name repeatedly appears as “Hōjō.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Nagasaki I were authorized]",
+      "after": "Nagasaki [were authorized]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Capital I is an OCR substitution for an opening bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Natsuka Ōkura Tayu [Masaie]",
+      "after": "Natsuka Ōkura Tayū [Masaie]",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged long vowel; “Tayū” occurs elsewhere in the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "overlord— with conventional",
+      "after": "overlord—with conventional",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Extraneous space immediately after an em dash.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "raj\\bar{o}i an earthen wall",
+      "after": "rajō, an earthen wall",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Unrendered TeX and OCR corruption damaged “rajō” and its following comma; the correct form appears at the end of the sentence.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "four [ northern] provinces",
+      "after": "four [northern] provinces",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 230 has no space after the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the [ continuing] campaign",
+      "after": "the [continuing] campaign",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Extraneous space inside an editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "literature. 52 Hideyoshi's",
+      "after": "literature. [52] Hideyoshi's",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ deaths of your husband]",
+      "after": "[deaths of your husband]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 179 has no space after the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "monasteries-like Hiei-had",
+      "after": "monasteries—like Hiei—had",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Parenthetical em dashes were extracted as hyphens.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "unprotected by· a history",
+      "after": "unprotected by a history",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Stray centered dot inserted between words.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "certain Jishu, Jodo, Zen",
+      "after": "certain Jishū, Jōdo, Zen",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 216 clearly prints Jishū and Jōdo with macrons.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Takeda, Mori, and others",
+      "after": "Takeda, Mōri, and others",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "This occurrence names the Mōri house alongside the Takeda; the book consistently uses Mōri for that lineage.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "struggle-for no previous",
+      "after": "struggle—for no previous",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A sentence-level dash was misrecognized as an in-word hyphen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "soldiers of the land. 18",
+      "after": "soldiers of the land. [18]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Unbracketed note marker; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[to act],· in all things",
+      "after": "[to act], in all things",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "An OCR middle dot follows the comma.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Mitsuhide' s former fief",
+      "after": "Mitsuhide's former fief",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Shikoku, Etchii, and Kii",
+      "after": "Shikoku, Etchū, and Kii",
+      "category": "heading",
+      "confidence": "high",
+      "evidence": "The valid section heading contains a damaged romanization; the same place-name appears as “Etchū” elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Satake Nakatsukasa Tayii",
+      "after": "Satake Nakatsukasa Tayū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The macronized ū was OCRed as ii.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Kyoto I were authorized]",
+      "after": "Kyoto [were authorized]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Capital I is an OCR substitution for an opening bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "97 Although biographical",
+      "after": "[97] Although biographical",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number at sentence opening.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Tokuzen'in [Maeda Gen'i)",
+      "after": "Tokuzen'in [Maeda Gen'i]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[residential entry gate)",
+      "after": "[residential entry gate]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with a parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "capitals. 66 Hideyoshi's",
+      "after": "capitals. [66] Hideyoshi's",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number should match surrounding bracketed note markers.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi' s difficulty",
+      "after": "Hideyoshi's difficulty",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hitotsuyanagi Kayiiwere",
+      "after": "Hitotsuyanagi Kayū were",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The macronized name was damaged and fused to the following word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Sakai I was authorized]",
+      "after": "Sakai [was authorized]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Capital I is an OCR substitution for an opening bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "place. 66 for Hideyoshi",
+      "after": "place. [66] For Hideyoshi",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker and resulting lowercase sentence opening.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the five [ magistrates)",
+      "after": "the five [magistrates]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched bracket and extraneous internal space.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Mas hi ta U emon no Jo",
+      "after": "Mashita Uemon no Jō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 138 clearly prints Mashita Uemon no Jō.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Nobunaga' s early wars",
+      "after": "Nobunaga's early wars",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "departure from Bitchii",
+      "after": "departure from Bitchū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same place-name appears elsewhere as “Bitchū”; OCR replaced ū with ii.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "decisive. 15 The Ikeda",
+      "after": "decisive. [15] The Ikeda",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Footnote 15 lost its brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "rigorous:: examination",
+      "after": "rigorous examination",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious doubled colon embedded in the phrase.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Asano Danjō [Nagamasa)",
+      "after": "Asano Danjō [Nagamasa]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Konan [south Vietnam)",
+      "after": "Kōnan [south Vietnam]",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 150 prints Kōnan with a macron and a closing square bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ashikaga. Yoshimasa's",
+      "after": "Ashikaga Yoshimasa's",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 200 prints the personal name Ashikaga Yoshimasa without an intervening period.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "\"now and current\"-and",
+      "after": "\"now and current\"—and",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 69 (printed page 53) clearly prints an em dash after the quoted gloss.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "shugo fraternity. 2 1",
+      "after": "shugo fraternity. [21]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker with separated digits and omitted brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "these [ reward lands]",
+      "after": "these [reward lands]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space immediately after an editorial opening bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Nobunaga' s authority",
+      "after": "Nobunaga's authority",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "discuss [ all things]",
+      "after": "discuss [all things]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space immediately after an editorial opening bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "districts [of Omi)...",
+      "after": "districts [of Ōmi]...",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The editorial bracket has the wrong closing delimiter and Ōmi has lost its macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Nobunaga' s greatness",
+      "after": "Nobunaga's greatness",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hashiba Hitachi Jijii",
+      "after": "Hashiba Hitachi Jijū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The macronized ū was OCRed as ii.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "faiko-sama go-kurairi",
+      "after": "taikō-sama go-kurairi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Initial t was misrecognized as f; the correct form appears nearby and elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "deputyshugo pedigrees",
+      "after": "deputy shugo pedigrees",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Two words fused during extraction.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ a simplified style]",
+      "after": "[a simplified style]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space follows the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi' s military",
+      "after": "Hideyoshi's military",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space follows the apostrophe.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "acts of Iese majesty",
+      "after": "acts of lese majesty",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 244 clearly prints the phrase lese majesty with a lowercase l.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "articles [ of peace]",
+      "after": "articles [of peace]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 230 has no space after the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "from Toji to another",
+      "after": "from Tōji to another",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same temple name repeatedly appears as “Tōji.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the zobun was seized",
+      "after": "the zōbun was seized",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron; “zōbun” recurs nearby.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the childlater known",
+      "after": "the child—later known",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "An explanatory dash was omitted, fusing adjacent words.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ogimachi's financial",
+      "after": "Ōgimachi's financial",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same emperor's name appears elsewhere as “Ōgimachi.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[in appreciation of)",
+      "after": "[in appreciation of]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with the wrong delimiter.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "either with Köfukuji",
+      "after": "either with Kōfukuji",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same name appears immediately above as “Kōfukuji”; the macron became a diaeresis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Nobunaga. 48 Whether",
+      "after": "Nobunaga. [48] Whether",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Footnote 48 lost its brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "his initial- contact",
+      "after": "his initial contact",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A line-break hyphen remains between two separate words.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "twentyfour rotations",
+      "after": "twenty-four rotations",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "The printed compound number was fused.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi' s castles",
+      "after": "Hideyoshi's castles",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Extraneous space within possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "six lozama represent",
+      "after": "six tozama represent",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Lowercase l substituted for t; “tozama” is repeated throughout.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi' s] forces",
+      "after": "Hideyoshi's] forces",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Extraneous space within possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "daimyo-helped reduce",
+      "after": "daimyo—helped reduce",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Hyphen is an extraction substitution for the paired parenthetical em dash.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "accept. 4 The throne",
+      "after": "accept. [4] The throne",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number interrupts prose; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "presentations of no,",
+      "after": "presentations of nō,",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The theatrical genre is nō.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "should [ conform to]",
+      "after": "should [conform to]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Extraneous space inside an editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "submit (to me there]",
+      "after": "submit [to me there]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "sakon 'e gon-shōshō",
+      "after": "sakon'e gon-shōshō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 249 clearly prints sakon'e without a space.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ direct retainers]",
+      "after": "[direct retainers]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 138 has no space after the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "commission no plays",
+      "after": "commission nō plays",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Japanese nō lost its macron; the file repeatedly uses the term for theatrical plays and performances.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "his no performances",
+      "after": "his nō performances",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Japanese nō lost its macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "treaties— to extend",
+      "after": "treaties—to extend",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious extraction space after an em dash.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "and Bitchii. In sum",
+      "after": "and Bitchū. In sum",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same place-name appears elsewhere as “Bitchū”; OCR replaced ū with ii.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "example [to others)",
+      "after": "example [to others]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with the wrong delimiter.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Katsuie' s wariness",
+      "after": "Katsuie's wariness",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi' s nephew",
+      "after": "Hideyoshi's nephew",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the Chiigoku. 25 To",
+      "after": "the Chūgoku. [25] To",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The regional name is Chūgoku, not “Chiigoku,” and footnote 25 lost its brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "must tum to another",
+      "after": "must turn to another",
+      "category": "other",
+      "confidence": "high",
+      "evidence": "OCR substituted m for rn.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Toyotomi, 94 pnmacy",
+      "after": "Toyotomi primacy.[94]",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Misplaced note number, spurious comma, and OCR corruption of “primacy.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi' s garden",
+      "after": "Hideyoshi's garden",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space follows the apostrophe.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ishida Jibu Shoyii",
+      "after": "Ishida Jibu Shōyū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 138 clearly prints Ishida Jibu Shōyū.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "missions by the 56",
+      "after": "missions by the Sō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The passage discusses missions by the Sō house; OCR rendered Sō as 56.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "screens.s[1] These",
+      "after": "screens.[51] These",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 208 ends the sentence with superscript note 51 after screens; OCR damaged the note digits and spacing.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "\"various\"-the word",
+      "after": "\"various\"—the word",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "The punctuation separates the quoted term from its explanation; OCR converted the printed dash to a hyphen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "shugo-some of whom",
+      "after": "shugo—some of whom",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A parenthetical dash was misrecognized as an in-word hyphen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Dosan successfully",
+      "after": "Dōsan successfully",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same name is repeatedly written “Dōsan” nearby.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Tokugawa in Tatami",
+      "after": "Tokugawa in Tōtōmi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The province is repeatedly named “Tōtōmi” elsewhere in the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "A Köfukuji diarist",
+      "after": "A Kōfukuji diarist",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same name appears immediately above as “Kōfukuji”; the macron became a diaeresis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Tenshō 16 ([1588]]",
+      "after": "Tenshō 16 [1588]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Malformed doubled and mismatched editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Bunroku 4 [[1595])",
+      "after": "Bunroku 4 [1595]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Doubled opening bracket and mismatched closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Tenshō 17 [[1589])",
+      "after": "Tenshō 17 [1589]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Doubled opening bracket and mismatched closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "holdings. 68 Three",
+      "after": "holdings. [68] Three",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "The note number lost its editorial brackets, unlike surrounding note markers.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "\"Tenka\"-The Realm",
+      "after": "\"Tenka\"—The Realm",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 176 clearly prints an em dash between the signature and its gloss.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "guests. 18 Months",
+      "after": "guests.[18] Months",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 195 prints note 18 immediately after military guests.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "that [ size ].\"48",
+      "after": "that [size].\" [48]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 133 prints note 48 after the closing quotation; the editorial insertion itself reads [size].",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "natural disaster}",
+      "after": "natural disaster)",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Closing parenthesis was misrecognized as a brace.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Nobunaga' s trust",
+      "after": "Nobunaga's trust",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "in Etchii against",
+      "after": "in Etchū against",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same place-name appears in the file as “Etchū”; OCR replaced ū with ii.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "their midtwenties",
+      "after": "their mid-twenties",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "The compound lost its printed hyphen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "his troops in Omi",
+      "after": "his troops in Ōmi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same place-name occurs earlier in the sentence as “Ōmi”; this occurrence lost its macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "shuinjo—documents",
+      "after": "shuinjō—documents",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same term appears nearby as “shuinjō.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "gy\\bar{o}k\\bar{o}",
+      "after": "gyōkō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Unrendered TeX macron commands remain in the Markdown; “gyōkō” recurs repeatedly.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 2
+    },
+    {
+      "before": "the taiko to help",
+      "after": "the taikō to help",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Macron is missing; “taikō” is the repeated form elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "separate no plays",
+      "after": "separate nō plays",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The theatrical genre is nō.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Bunroku 4 f1595]",
+      "after": "Bunroku 4 [1595]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 161 prints the western year 1595 in square brackets; OCR substituted f for the opening bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "capital area. 11",
+      "after": "capital area. [11]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Unbracketed note marker; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "twentyfour years",
+      "after": "twenty-four years",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Fused compound numeral.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Emperor Ögimachi",
+      "after": "Emperor Ōgimachi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same emperor's name appears elsewhere as “Ōgimachi.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 2
+    },
+    {
+      "before": "campaign in C>mi",
+      "after": "campaign in Ōmi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The place-name repeatedly appears as “Ōmi”; OCR rendered the initial character as “C>”.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Honnöji incident",
+      "after": "Honnōji incident",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The name repeatedly appears as “Honnōji”; the macron became a diaeresis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 2
+    },
+    {
+      "before": "peace. five were",
+      "after": "peace. Five were",
+      "category": "other",
+      "confidence": "high",
+      "evidence": "Sentence-initial capital was lost.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Bunroku [[1592])",
+      "after": "Bunroku [1592]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Doubled opening bracket and mismatched closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "bugyo were large",
+      "after": "bugyō were large",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron; “bugyō” is the established repeated form.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "preocc'. lpation",
+      "after": "preoccupation",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Multiple punctuation and letter substitutions embedded within the word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "tum to the court",
+      "after": "turn to the court",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "OCR letter substitution produces a nonword.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "sixtynine blocks",
+      "after": "sixty-nine blocks",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Compound number was fused and lost its hyphen; “sixty-nine” appears elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "force. 8 Neither",
+      "after": "force. [8] Neither",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[Natsuka Masaie)",
+      "after": "[Natsuka Masaie]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "shall I also] go",
+      "after": "shall [also] go",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Capital I substituted for the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Higashi Kyogoku",
+      "after": "Higashi Kyōgoku",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 216 clearly prints Higashi Kyōgoku.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "daimyo-if young",
+      "after": "daimyo—if young",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 160 prints an em dash after daimyo in this parenthetical construction.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "land J.nd power",
+      "after": "land and power",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 182 prints 'land and power'; OCR substituted punctuation and an uppercase J for the word and.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Shiba lords. 13",
+      "after": "Shiba lords. [13]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Unbracketed note marker; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "jitō [ military",
+      "after": "jitō [military",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space immediately inside an editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "pledged lovalty",
+      "after": "pledged loyalty",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "OCR substituted v for y.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Gifu— the place",
+      "after": "Gifu—the place",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space follows an em dash.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "road to Bitchii",
+      "after": "road to Bitchū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same place-name appears earlier as “Bitchū”; OCR replaced ū with ii.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "back to Honnöji",
+      "after": "back to Honnōji",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The name repeatedly appears as “Honnōji”; the macron became a diaeresis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "news of Honnoji",
+      "after": "news of Honnōji",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The repeated form is “Honnōji”; OCR omitted the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Samboshi during",
+      "after": "Sambōshi during",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The name appears repeatedly in the passage as “Sambōshi”; OCR omitted the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "neighboring lga",
+      "after": "neighboring Iga",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Lowercase l was substituted for capital I in the place-name Iga.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "]ito in Shikoku",
+      "after": "Jitō in Shikoku",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "A bracket was substituted for J and the macron was lost; “jitō” recurs elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ on the oaths]",
+      "after": "[on the oaths]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Extraneous space immediately inside an editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "jurisdiction. 6",
+      "after": "jurisdiction. [6]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number should match surrounding bracketed note markers.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Tensh\\bar{o}-ki",
+      "after": "Tenshō-ki",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Unrendered TeX macron command remains; “Tenshō-ki” appears correctly nearby.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 2
+    },
+    {
+      "before": "no performances",
+      "after": "nō performances",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The theatrical genre is nō; this defect occurs five times in the bounded range.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 5
+    },
+    {
+      "before": "[ of Hideyoshi]",
+      "after": "[of Hideyoshi]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space follows the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "threestory keep",
+      "after": "three-story keep",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Compound word was fused and lost its hyphen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "twentyninth day",
+      "after": "twenty-ninth day",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Compound ordinal was fused and lost its hyphen; “twenty-ninth” appears elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[Ukita Hideie ]",
+      "after": "[Ukita Hideie]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Extraneous space inside an editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "family.\" 14 The",
+      "after": "family.\" [14] The",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "No had remained",
+      "after": "Nō had remained",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron in the Japanese theatrical term nō.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "elders-Tokugawa",
+      "after": "elders—Tokugawa",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Hyphen substituted for the dash introducing the list of elders.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "appeals I also]",
+      "after": "appeals [also]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Capital I substituted for the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ calculating]",
+      "after": "[calculating]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 128 has no space after the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "never re! axed",
+      "after": "never relaxed",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 86 prints 'never relaxed'; OCR inserted punctuation and split the word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "leanings-those",
+      "after": "leanings—those",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF pages 256-257 print an em dash in the parenthetical phrase spanning the page boundary.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Naka tsukasa's",
+      "after": "Nakatsukasa's",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 138 prints the title Nakatsukasa as one word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "wider rule. 12",
+      "after": "wider rule. [12]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Unbracketed note marker; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[confiscation)",
+      "after": "[confiscation]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Malformed editorial bracket with a mismatched closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Kivosu faction",
+      "after": "Kiyosu faction",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "OCR substituted v for y; “Kiyosu” recurs throughout the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "lake.\" 13 This",
+      "after": "lake.\" [13] This",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Footnote 13 lost its brackets; adjacent notes use bracketed markers.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "ground.\" 14 As",
+      "after": "ground.\" [14] As",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Footnote 14 lost its brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "nl'! cessarily",
+      "after": "necessarily",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Severe punctuation noise was embedded in the word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the law. 7 And",
+      "after": "the law. [7] And",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number should match surrounding bracketed note markers.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Tokugawaperiod",
+      "after": "Tokugawa-period",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Words were fused during extraction; the compound modifies “historians.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[this custom).",
+      "after": "[this custom].",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with a parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "known as taiko",
+      "after": "known as taikō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Macron is missing; the form “taikō” recurs elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi]. 43",
+      "after": "Hideyoshi]. [43]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number should match surrounding bracketed note markers.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "banquet.so Few",
+      "after": "banquet.[50] Few",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "OCR converted bracketed note 50 to “.so”; adjacent notes establish the sequence.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Sanjiisangendo",
+      "after": "Sanjūsangendō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "OCR rendered both macronized vowels as ii/o in the temple name.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "interest in no",
+      "after": "interest in nō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron in the Japanese theatrical term nō.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Mōri Teramoto",
+      "after": "Mōri Terumoto",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF pages 89 and 222 print Mōri Terumoto; the index and other occurrences confirm the same historical name.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 2
+    },
+    {
+      "before": "56 Yoshishige",
+      "after": "Sō Yoshishige",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed name is Sō Yoshishige; the book index also lists Sō Yoshishige and the Sō house.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "clouddwellers",
+      "after": "cloud-dwellers",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 34 prints the line-broken compound cloud-dwellers.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "gon-chiinagon",
+      "after": "gon-chūnagon",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 249 clearly prints gon-chūnagon.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[of the case)",
+      "after": "[of the case]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 122 uses an editorial square-bracket insertion; OCR confused its closing bracket with a parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ our throne]",
+      "after": "[our throne]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 107 has no space after the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Yoshi nobu' s",
+      "after": "Yoshinobu's",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 138 prints the personal name and possessive as Yoshinobu's.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ determined]",
+      "after": "[determined]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 138 has no space after the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Mori Motonari",
+      "after": "Mōri Motonari",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The historical name and the book's repeated house spelling establish Mōri Motonari with a macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 2
+    },
+    {
+      "before": "Mori Hidemoto",
+      "after": "Mōri Hidemoto",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "This is Mōri Hidemoto of the Mōri house; the macron distinguishes that lineage from the separate Mori surname.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[in Odawara ]",
+      "after": "[in Odawara]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 110 (printed page 94) has no space before the closing editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "sevenyear-old",
+      "after": "seven-year-old",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Fused compound adjective.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "war-tom Kyoto",
+      "after": "war-torn Kyoto",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "OCR substituted m for rn.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "authority. 14",
+      "after": "authority. [14]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Unbracketed note marker; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[Yoshiaki' s]",
+      "after": "[Yoshiaki's]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Item [ [4] ]:",
+      "after": "Item [4]:",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Malformed doubled editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[you brought)",
+      "after": "[you brought]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with the wrong delimiter.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ise, lga, Ōmi",
+      "after": "Ise, Iga, Ōmi",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Lowercase l was substituted for capital I in the place-name Iga.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Miki [castle)",
+      "after": "Miki [castle]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with the wrong delimiter.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Jodo Shinshii",
+      "after": "Jōdo Shinshū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Multiple macrons were damaged; the sect name recurs as “Jōdo Shinshū.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "in Etchii but",
+      "after": "in Etchū but",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The province is repeatedly spelled “Etchū.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Mori Terumoto",
+      "after": "Mōri Terumoto",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron; the name repeatedly appears as “Mōri” elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 4
+    },
+    {
+      "before": "[other) homes",
+      "after": "[other] homes",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "usage of kogi",
+      "after": "usage of kōgi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron; the same term is spelled “kōgi” immediately before and after.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the nation. 8",
+      "after": "the nation. [8]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number should match surrounding bracketed note markers.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[in offense).",
+      "after": "[in offense].",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with a parenthesis; this defect occurs twice.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Nara Oaibutsu",
+      "after": "Nara Daibutsu",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Initial D was misrecognized as O in the established name Nara Daibutsu.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[Hidetsugu's)",
+      "after": "[Hidetsugu's]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "men-to resume",
+      "after": "men—to resume",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A hyphen was substituted for the em dash introducing the modifying phrase.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[magistrates)",
+      "after": "[magistrates]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the 56 envoy",
+      "after": "the Sō envoy",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The sentence refers back to Sō Yoshishige; OCR rendered Sō as 56.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the 56 house",
+      "after": "the Sō house",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The book index establishes Sō house; OCR rendered Sō as 56.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "gun 'yakushu",
+      "after": "gun'yakushu",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF pages 46 and 47 print the romanized office gun'yakushu without a space.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 2
+    },
+    {
+      "before": "Kamiya Satan",
+      "after": "Kamiya Sōtan",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 154 clearly prints the merchant name Kamiya Sōtan.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "circuits. 47",
+      "after": "circuits. [47]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 133 prints note 47 as a superscript immediately after circuits; the book's parsed-note convention uses square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ryu.ho-where",
+      "after": "Ryūhō—where",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 240 (printed page 224) clearly prints Mount Ryūhō followed by an em dash.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Toji as well",
+      "after": "Tōji as well",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same temple name repeatedly appears as “Tōji.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "avoided.\" 28",
+      "after": "avoided.\" [28]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Unbracketed note marker; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "pedigree. 41",
+      "after": "pedigree. [41]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Unbracketed note marker; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "comingof-age",
+      "after": "coming-of-age",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Fused compound.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Item [[1] ]:",
+      "after": "Item [1]:",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Malformed doubled editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 4
+    },
+    {
+      "before": "lesspowerful",
+      "after": "less powerful",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Two words were fused during extraction.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "from Honnoji",
+      "after": "from Honnōji",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The repeated form is “Honnōji”; OCR omitted the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyoshi' s",
+      "after": "Hideyoshi's",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "OCR inserted a space inside the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 18
+    },
+    {
+      "before": "Item [ [3]]:",
+      "after": "Item [3]:",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Duplicated and malformed editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "(lzu, Sagami",
+      "after": "(Izu, Sagami",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Lowercase l was substituted for capital I in the province name.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the no plays",
+      "after": "the nō plays",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The Japanese dramatic form requires the macron; the file elsewhere uses romanized macrons.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the shuinjo.",
+      "after": "the shuinjō.",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same term appears nearby as “shuinjō.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "18,- 280,880",
+      "after": "18,280,880",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A spurious hyphen and space split the number.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "lki Nagahama",
+      "after": "Iki Nagahama",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Lowercase l is an OCR substitution for capital I.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "nom.inations",
+      "after": "nominations",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Punctuation embedded in a word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[in Fushimi)",
+      "after": "[in Fushimi]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "hf s country",
+      "after": "his country",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "OCR corruption of “his.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "will fall.\"5",
+      "after": "will fall.\"[5]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Unbracketed note marker; neighboring notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Mori or Hōjō",
+      "after": "Mōri or Hōjō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron; repeated form elsewhere is “Mōri.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[the tenth).",
+      "after": "[the tenth].",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with a parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the rajo may",
+      "after": "the rajō may",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Macron is missing; “rajō” appears correctly later in the same line.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "this.\" 31 He",
+      "after": "this.\" [31] He",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Traitors. 34",
+      "after": "Traitors. [34]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "(jige chii)",
+      "after": "(jige-chū)",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 122 clearly prints the hyphenated form jige-chū.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "offense. 46",
+      "after": "offense. [46]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 133 prints note 46 as a superscript immediately after offense; the book's parsed-note convention uses square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyori' s",
+      "after": "Hideyori's",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 236 (printed page 220) prints the possessive Hideyori's without an internal space.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Nobuhide' s",
+      "after": "Nobuhide's",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space embedded in the possessive; “Nobuhide's” recurs elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "no recitals",
+      "after": "nō recitals",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Japanese nō lost its macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ouchi house",
+      "after": "Ōuchi house",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same name appears elsewhere in the file as “Ōuchi.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "(gonaisho )",
+      "after": "(gonaisho)",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space before the closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "op·position",
+      "after": "opposition",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "An OCR middle dot is embedded in the word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Asai inlaws",
+      "after": "Asai in-laws",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Compound word lost its printed hyphen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[beautiful)",
+      "after": "[beautiful]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with the wrong delimiter.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[Hideyoshi)",
+      "after": "[Hideyoshi]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with the wrong delimiter.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-02.json",
+      "expected_count": 1
+    },
+    {
+      "before": "kyiinin-chi",
+      "after": "kyūnin-chi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged romanization of the retainer-land term; both occurrences have the same defect.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 2
+    },
+    {
+      "before": "Item ([8]):",
+      "after": "Item [8]:",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious parenthesis around the editorial item number.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Item ([9]]:",
+      "after": "Item [9]:",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious parenthesis and doubled closing bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "twentythree",
+      "after": "twenty-three",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "The printed compound number was fused.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[the Taiko]",
+      "after": "[the Taikō]",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron; “Taikō” is repeatedly used elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[remain at)",
+      "after": "[remain at]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Mori forces",
+      "after": "Mōri forces",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron; repeated form elsewhere is “Mōri.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "headgear. 7",
+      "after": "headgear.[7]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare note number; neighboring notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "to no drama",
+      "after": "to nō drama",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Missing macron in the name of the Japanese dramatic form.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[ of rule).",
+      "after": "[of rule].",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial insertion has a spurious leading space and mismatched closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[stretched)",
+      "after": "[stretched]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with a parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "you.\" 11 He",
+      "after": "you.\" [11] He",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "women... 37",
+      "after": "women... [37]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[Lord Kuja]",
+      "after": "[Lord Kujō]",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged final vowel/macron; Kujō is correctly printed immediately before this occurrence.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ogyii Sorai",
+      "after": "Ogyū Sorai",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged macronized romanization of Ogyū Sorai.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "wornenfolk",
+      "after": "womenfolk",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 195 prints womenfolk; OCR confused m with rn.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "allow ance",
+      "after": "allowance",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 138 prints the unbroken word allowance in the Satake vesting table.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "taiko-sama",
+      "after": "taikō-sama",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 138 clearly prints taikō-sama with a macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "politic_al",
+      "after": "political",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Spurious underscore embedded in a word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "and Omura.",
+      "after": "and Ōmura.",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The same house is repeatedly spelled “Ōmura.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "komono-who",
+      "after": "komono—who",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A hyphen was substituted for the sentence's parenthetical dash.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "lanq.scape",
+      "after": "landscape",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "OCR substitutions and punctuation embedded within the word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "be-. cause",
+      "after": "because",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Extraction introduced a hyphen, period, and space inside the word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Imai Sokyu",
+      "after": "Imai Sōkyū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Both macrons are missing; “Imai Sōkyū” appears elsewhere in the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Kama River",
+      "after": "Kamo River",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The Kyoto river is repeatedly named Kamo River elsewhere, including line 1014.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hideyo.shi",
+      "after": "Hideyoshi",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A period is embedded in the name.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "selfdeceit",
+      "after": "self-deceit",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Fused compound.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "kampaku. \"",
+      "after": "kampaku.\"",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Extraneous space before the closing quotation mark.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[for home)",
+      "after": "[for home]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ritsu-Ryo",
+      "after": "Ritsu-Ryō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 180 clearly prints the author's hyphenated form Ritsu-Ryō.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[for him)",
+      "after": "[for him]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 122 uses an editorial square-bracket insertion; OCR confused its closing bracket with a parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "paddy. 44",
+      "after": "paddy. [44]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 132 prints note 44 as a superscript immediately after paddy; the book's parsed-note convention uses square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "twothirds",
+      "after": "two-thirds",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 161 prints the compound fraction two-thirds with a hyphen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Chosokabe",
+      "after": "Chōsokabe",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed book and neighboring occurrences consistently spell the Chōsokabe house with a macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 4
+    },
+    {
+      "before": "sixtynine",
+      "after": "sixty-nine",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Physical PDF page 240 (printed page 224) prints sixty-nine across a typeset line break.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "go-onkyii",
+      "after": "go-onkyū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The correctly macronized “go-onkyū” occurs on the preceding line.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "daimyo' s",
+      "after": "daimyo's",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space embedded in the possessive.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Chasokabe",
+      "after": "Chōsokabe",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The family name repeatedly appears as “Chōsokabe.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 2
+    },
+    {
+      "before": "Item [I]:",
+      "after": "Item [1]:",
+      "category": "other",
+      "confidence": "high",
+      "evidence": "Capital I was substituted for the numbered item marker 1.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "encourged",
+      "after": "encouraged",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "The word is missing its second a.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Tamba. 82",
+      "after": "Tamba.[82]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Bare footnote number; surrounding notes use square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "W2 cannot",
+      "after": "We cannot",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Digit 2 substituted for lowercase e.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "\"bash\"-of",
+      "after": "\"bash\"—of",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A hyphen was extracted where the sentence requires the parenthetical dash used throughout the prose.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "no stages",
+      "after": "nō stages",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The theatrical genre is nō.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 2
+    },
+    {
+      "before": "bestknown",
+      "after": "best-known",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Fused compound; the context requires the printed compound adjective.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Chiinagon",
+      "after": "Chūnagon",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged romanization of the Japanese court title chūnagon.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 2
+    },
+    {
+      "before": "a! yvelie",
+      "after": "a lyvelie",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Exclamation mark substituted for lowercase l inside an archaic quoted word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "(ryashu)",
+      "after": "(ryōshu)",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 39 (printed page 23) clearly prints ryōshu with a macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "the Mori",
+      "after": "the Mōri",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF pages 93, 94, 97, and 98 consistently print the Mōri house with a macron; this phrase does not affect the distinct Mori Nagayoshi or Mori Hideyori names.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 24
+    },
+    {
+      "before": "The Mori",
+      "after": "The Mōri",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF pages 93, 94, 97, and 98 consistently print the Mōri house with a macron; capitalization is preserved.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 5
+    },
+    {
+      "before": "Samboshi",
+      "after": "Sambōshi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The personal designation is Sambōshi; neighboring correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "jita who",
+      "after": "jitō who",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged romanization; “jitō” recurs throughout the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Nobulide",
+      "after": "Nobuhide",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "OCR substituted l for h; “Nobuhide” recurs many times.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Ryiizoji",
+      "after": "Ryūzōji",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged macron romanization; “Ryūzōji” appears earlier in the bounded passage.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 2
+    },
+    {
+      "before": "t ry ing",
+      "after": "trying",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "OCR inserted spaces inside the word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "kogafana",
+      "after": "kogatana",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "OCR substituted f for t in the standard Japanese word for dagger.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "10,- 000",
+      "after": "10,000",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A spurious hyphen and space split the number.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "bugaku )",
+      "after": "bugaku)",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space occurs before the closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "no drama",
+      "after": "nō drama",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The theatrical genre is nō; correctly macronized forms appear elsewhere in the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 4
+    },
+    {
+      "before": "dampered",
+      "after": "dampened",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Letter-level transcription defect in the standard phrase “not dampened by apprehensions.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Yododono",
+      "after": "Yodo-dono",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Fused personal designation; Yodo-dono recurs elsewhere in the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "nō.' \"65",
+      "after": "nō.' \" [65]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Shonyii",
+      "after": "Shōnyū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 179 clearly prints the court title Shōnyū.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "1548.42",
+      "after": "1548.[42]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Physical PDF page 51 prints note 42 as a superscript after 1548; the parsed-note convention uses square brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "chiigen",
+      "after": "chūgen",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 122 clearly prints the lower-case status term chūgen.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Chugoku",
+      "after": "Chūgoku",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed regional name is Chūgoku; other correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Kyogoku",
+      "after": "Kyōgoku",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The family name is Kyōgoku; neighboring correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Samboin",
+      "after": "Sambōin",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The temple residence is Sambōin; neighboring correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "welloff",
+      "after": "well-off",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Fused compound adjective.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "zōbun )",
+      "after": "zōbun)",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space before a closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "lo zama",
+      "after": "tozama",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Fused OCR damage to the repeatedly used term “tozama.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Chiigen",
+      "after": "Chūgen",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged macron romanization of the military rank.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "remammg",
+      "after": "remaining",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "OCR substituted “mm” for “ini.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Macao).",
+      "after": "Macao].",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Closing parenthesis mismatches the opening editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "toz.ama",
+      "after": "tozama",
+      "category": "broken_word",
+      "confidence": "high",
+      "evidence": "Punctuation embedded in a word repeatedly spelled “tozama” elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "0-Hiroi",
+      "after": "O-Hiroi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Digit zero substituted for capital O.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[to us)",
+      "after": "[to us]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[there)",
+      "after": "[there]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial bracket.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "gyiikii",
+      "after": "gyōkō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "OCR damaged both macronized vowels; the same event is consistently called “gyōkō.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[Along)",
+      "after": "[Along]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Editorial bracket is closed with a parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Yodo' s",
+      "after": "Yodo's",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space embedded before the possessive suffix.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[their)",
+      "after": "[their]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial brackets in quoted archaic English.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Arnako",
+      "after": "Amako",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 169 and the historical context identify the Amako house; OCR confused m with rn.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Honshu",
+      "after": "Honshū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed island name is Honshū; other correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Tohoku",
+      "after": "Tōhoku",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The regional name is Tōhoku; neighboring correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "furyii",
+      "after": "furyū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "OCR rendered macroned ū as ii; the same OCR pattern appears in “go-onkyii” for “go-onkyū.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 2
+    },
+    {
+      "before": "fozama",
+      "after": "tozama",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "OCR letter substitution in the repeatedly used term “tozama.”",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 3
+    },
+    {
+      "before": "Hyiiga",
+      "after": "Hyūga",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged macron romanization; “Hyūga” recurs in the passage.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[them)",
+      "after": "[them]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A closing editorial bracket was misrecognized as a parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Yiisai",
+      "after": "Yūsai",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The macronized ū was OCRed as ii; “Yūsai” recurs elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 4
+    },
+    {
+      "before": "koku )",
+      "after": "koku)",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "OCR inserted a space before the closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 2
+    },
+    {
+      "before": "de_ath",
+      "after": "death",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "A spurious underscore was embedded in the word.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[10] 1",
+      "after": "[101]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Footnote number split by an intrusive bracket and space; neighboring sequence confirms note 101.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Rikyii",
+      "after": "Rikyū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "OCR “ii” substituted for long ū; “Rikyū” repeatedly occurs elsewhere.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-04.json",
+      "expected_count": 7
+    },
+    {
+      "before": "gyiiko",
+      "after": "gyōkō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Damaged duplicate occurrence of gyōkō, whose correct form appears earlier in the same sentence.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "[then)",
+      "after": "[then]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Mismatched editorial brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-06.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Rikyu",
+      "after": "Rikyū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical pages 240-241 and all neighboring occurrences print the tea master's name Rikyū.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Otomo",
+      "after": "Ōtomo",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed book and neighboring occurrences consistently spell the Ōtomo house with a macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 3
+    },
+    {
+      "before": "Ouchi",
+      "after": "Ōuchi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed book and neighboring occurrences consistently spell the Ōuchi house with a macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 3
+    },
+    {
+      "before": "Sorin",
+      "after": "Sōrin",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The surrounding sentence already identifies Ōtomo Sōrin; OCR dropped the macron from the shortened second mention.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Hyogo",
+      "after": "Hyōgo",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed place name is Hyōgo; OCR dropped its macron in this occurrence.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Jishu",
+      "after": "Jishū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed sect and temple name is Jishū; another correctly extracted occurrence retains the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "zobun",
+      "after": "zōbun",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The land-survey term is zōbun; neighboring correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Omura",
+      "after": "Ōmura",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The family name is Ōmura; neighboring correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 2
+    },
+    {
+      "before": "Taiko",
+      "after": "Taikō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The court title is Taikō; the printed book and neighboring occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "taiko",
+      "after": "taikō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The lower-case court title is taikō; the printed book and neighboring occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 2
+    },
+    {
+      "before": "shoen",
+      "after": "shōen",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The estate term is shōen; the printed terminology uses a macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Oshii",
+      "after": "Ōshū",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Physical PDF page 110 (printed page 94) clearly prints Ōshū in both occurrences.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 2
+    },
+    {
+      "before": "1 [0]",
+      "after": "[10]",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Damaged note marker with the first digit displaced outside the brackets.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "mon )",
+      "after": "mon)",
+      "category": "punctuation",
+      "confidence": "high",
+      "evidence": "Spurious space before a closing parenthesis.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-01.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Garno",
+      "after": "Gamō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "OCR read “mō” as “rno”; the same house recurs elsewhere in the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-03.json",
+      "expected_count": 9
+    },
+    {
+      "before": "taik5",
+      "after": "taikō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Digit 5 replaces macronized ō; repeated form “taikō” appears elsewhere in the file.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/part-05.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Jodo",
+      "after": "Jōdo",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "Other correctly extracted occurrences and the printed terminology establish Jōdo Shinshū.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 4
+    },
+    {
+      "before": "Hojo",
+      "after": "Hōjō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed book and the many correctly extracted occurrences consistently spell the Hōjō house with macrons.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 4
+    },
+    {
+      "before": "jito",
+      "after": "jitō",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The historical office is jitō; all neighboring correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Toji",
+      "after": "Tōji",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The temple name is Tōji; all neighboring correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Koya",
+      "after": "Kōya",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The mountain and temple name is Kōya; neighboring occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "kogi",
+      "after": "kōgi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The political term is kōgi; neighboring correctly extracted occurrences retain the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 1
+    },
+    {
+      "before": "Omi",
+      "after": "Ōmi",
+      "category": "romanization",
+      "confidence": "high",
+      "evidence": "The printed book consistently spells the province Ōmi; physical pages 69, 93, 94, 97, and 98 confirm the macron.",
+      "source_pages": [],
+      "audit_path": "books/hideyoshi-berry/work/source-qa-v3/manual-visual.json",
+      "expected_count": 23
+    }
+  ]
+}

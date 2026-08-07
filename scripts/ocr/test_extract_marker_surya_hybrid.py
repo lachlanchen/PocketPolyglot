@@ -6,7 +6,9 @@ from __future__ import annotations
 import unittest
 
 from extract_marker_surya_hybrid import (
+    flatten_output_blocks,
     fuse_marker_surya_text,
+    html_table_to_markdown,
     join_ocr_lines,
     normalized_word,
     strip_html,
@@ -88,6 +90,75 @@ class MarkerSuryaHybridTests(unittest.TestCase):
 
     def test_normalization_compares_embedded_six_as_long_o(self) -> None:
         self.assertEqual(normalized_word("Daimy6jin"), normalized_word("Daimyōjin"))
+
+    def test_nested_list_items_are_not_dropped(self) -> None:
+        blocks = [
+            {
+                "block_type": "Text",
+                "html": "<p>Introduction</p>",
+            },
+            {
+                "block_type": "ListGroup",
+                "children": [
+                    {"block_type": "ListItem", "html": "<li>Item 1</li>"},
+                    {"block_type": "ListItem", "html": "<li>Item 2</li>"},
+                ],
+            },
+        ]
+        self.assertEqual(
+            [block["block_type"] for block in flatten_output_blocks(blocks)],
+            ["Text", "ListItem", "ListItem"],
+        )
+
+    def test_grouped_picture_and_caption_keep_source_order(self) -> None:
+        blocks = [
+            {
+                "block_type": "PictureGroup",
+                "children": [
+                    {"block_type": "Picture", "images": {"image": "encoded"}},
+                    {"block_type": "Caption", "html": "<p>Map 1</p>"},
+                ],
+            }
+        ]
+        flattened = flatten_output_blocks(blocks)
+        self.assertEqual([block["block_type"] for block in flattened], ["Picture"])
+        self.assertEqual(flattened[0]["_group_caption_html"], "<p>Map 1</p>")
+
+    def test_table_parent_remains_atomic(self) -> None:
+        table = {
+            "block_type": "Table",
+            "html": "<table><tr><td>A</td></tr></table>",
+            "children": [{"block_type": "TableCell", "html": "<td>A</td>"}],
+        }
+        self.assertEqual(flatten_output_blocks([table]), [table])
+
+    def test_html_table_preserves_rows_and_merges_wrapped_cells(self) -> None:
+        source = """
+        <table><tbody>
+          <tr><th>·</th><th>U</th><th></th><th></th><th></th></tr>
+          <tr><th>Location</th><th>Type</th><th>Size</th><th>Value</th><th>Cultivator</th></tr>
+          <tr><td>Same</td><td>superior dry</td><td></td><td></td><td></td></tr>
+          <tr><td></td><td>field</td><td>96</td><td>0.3.8.4</td><td>Same</td></tr>
+        </tbody></table>
+        """
+        self.assertEqual(
+            html_table_to_markdown(source),
+            "\n".join(
+                [
+                    "| Location | Type | Size | Value | Cultivator |",
+                    "| --- | --- | --- | --- | --- |",
+                    "| Same | superior dry field | 96 | 0.3.8.4 | Same |",
+                ]
+            ),
+        )
+
+    def test_one_row_table_remains_caption_text(self) -> None:
+        self.assertEqual(
+            html_table_to_markdown(
+                "<table><tr><th>Table</th><th>1.</th><th>Caption</th></tr></table>"
+            ),
+            "Table 1. Caption",
+        )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "book_id": "hideyoshi-berry",
+  "rejected_repairs": [
+    {
+      "before": "became\nHideyoshi's",
+      "after": "became Hideyoshi's",
+      "reason": "The paragraph parser already joins this proven page continuation; parsed ledgers intentionally reject multiline rules."
+    },
+    {
+      "before": "ended at the Oda borders\nSometime",
+      "after": "ended at the Oda borders.\nSometime",
+      "reason": "This source-page punctuation repair is applied before parsing with an exact raw replacement."
+    },
+    {
+      "before": "par-\nticipated",
+      "after": "participated",
+      "reason": "The source parser already resolves this line-end hyphenation; parsed ledgers intentionally reject multiline rules."
+    },
+    {
+      "before": "To The accounts",
+      "after": "The accounts",
+      "reason": "A source-page reconstruction restores the preceding citation and paragraph boundary instead of deleting To in isolation."
+    },
+    {
+      "before": "The claimed at least 62,120 men from twenty-eight daimyo for that work. It have ordered",
+      "after": "I have ordered",
+      "reason": "The proposed replacement deletes two valid sentences; the passage is reconstructed from the printed page before parsing."
+    },
+    {
+      "before": "ac- tivity",
+      "after": "activity",
+      "reason": "This raw extraction defect is repaired before parsing with an exact source replacement."
+    },
+    {
+      "before": "Tonkin [north Vietnam]",
+      "after": "Tonkin [north Vietnam]",
+      "reason": "No-op suggestion; the source text is already correct."
+    },
+    {
+      "before": "Konan [south Vietnam)",
+      "after": "Konan [south Vietnam]",
+      "reason": "Visual review also recovered the missing macron; the accepted manual repair is Kōnan [south Vietnam]."
+    },
+    {
+      "before": "Saka Castle and Hōjō Ujimasa—they also describe his mortuary temple.",
+      "after": "Saka Castle and Hōjō Ujimasa—they also describe his mortuary temple.",
+      "reason": "No-op suggestion; the entire duplicated fragment is removed by a source-page exact replacement."
+    },
+    {
+      "before": "court. 18 Months",
+      "after": "court. [18] Months",
+      "reason": "The audit attached note 18 to the wrong sentence; physical PDF page 195 places it after military guests, repaired by the manual visual ledger."
+    },
+    {
+      "before": "existence. 43",
+      "after": "existence. [43]",
+      "reason": "This candidate does not occur in the extracted body or the printed passage and is an unsupported audit hallucination."
+    },
+    {
+      "before": "lawless-ness",
+      "after": "lawlessness",
+      "reason": "The parser represents this page-break artifact as lawless- ness; the visually verified manual repair targets the actual parsed text."
+    },
+    {
+      "before": "[him)",
+      "after": "[him]",
+      "reason": "The candidate omits the word for and does not occur; the manual visual repair targets the complete printed phrase [for him)."
+    },
+    {
+      "before": "### Tokugawa Ieyasu continued:",
+      "after": "Tokugawa Ieyasu continued:",
+      "reason": "This structural de-heading is applied during line normalization, before the parsed repair ledger."
+    },
+    {
+      "before": "I able e ] i. I Part ot a kenchi register from 1594.",
+      "after": "Table 1. Part of a kenchi register from 1594.",
+      "reason": "The rebuilt table extractor now emits a slightly different damaged caption; the source-page-proven caption is repaired exactly before parsing."
+    },
+    {
+      "before": "lawless- ness",
+      "after": "lawlessness",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "fi- nally",
+      "after": "finally",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "sue- ceeded",
+      "after": "succeeded",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "regis- tered",
+      "after": "registered",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "atti- tudes",
+      "after": "attitudes",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "1548. 42",
+      "after": "1548. [42]",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text."
+    },
+    {
+      "before": "No- bunaga",
+      "after": "Nobunaga",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "op- ponents",
+      "after": "opponents",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "mil- itant",
+      "after": "militant",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "ex- posed",
+      "after": "exposed",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "righteous- ness",
+      "after": "righteousness",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "Hi- deyoshi's campaigns",
+      "after": "Hideyoshi's campaigns",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "never re- ! axed",
+      "after": "never relaxed",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text."
+    },
+    {
+      "before": "No- bunaga's death",
+      "after": "Nobunaga's death",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "construe- tion",
+      "after": "construction",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "might well have re- treated",
+      "after": "might well have retreated",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "the pre- tense of good stewardship",
+      "after": "the pretense of good stewardship",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "subse- quent",
+      "after": "subsequent",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "the Mori, Ko- bayakawa, and Uesugi",
+      "after": "the Mōri, Kobayakawa, and Uesugi",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text."
+    },
+    {
+      "before": "sub- sided",
+      "after": "subsided",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "pre- sided",
+      "after": "presided",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "readi- ness",
+      "after": "readiness",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "de- scription",
+      "after": "description",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "regis- tries",
+      "after": "registries",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "rela- tions",
+      "after": "relations",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "some- what",
+      "after": "somewhat",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "Mas hi ta Uemon no Jo",
+      "after": "Mashita Uemon no Jō",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "Hi- deyoshi's",
+      "after": "Hideyoshi's",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "specifi- cally",
+      "after": "specifically",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "commis- sioner",
+      "after": "commissioner",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "Hideyoshi's dis- posal",
+      "after": "Hideyoshi's disposal",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "out- side their own domains",
+      "after": "outside their own domains",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "domainal man- agement",
+      "after": "domainal management",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "land J. nd power",
+      "after": "land and power",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text."
+    },
+    {
+      "before": "Patron- age",
+      "after": "Patronage",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "worn- enfolk",
+      "after": "womenfolk",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text."
+    },
+    {
+      "before": "Ashikaga.Yoshimasa's",
+      "after": "Ashikaga Yoshimasa's",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text."
+    },
+    {
+      "before": "as- sert",
+      "after": "assert",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "him- self",
+      "after": "himself",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "screens. s[1] These",
+      "after": "screens. [51] These",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text."
+    },
+    {
+      "before": "22. 5 kilometers",
+      "after": "22.5 kilometers",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "3. 6 to 18 meters",
+      "after": "3.6 to 18 meters",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "restora- tion",
+      "after": "restoration",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "atten- tion",
+      "after": "attention",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "sue- cession",
+      "after": "succession",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "po- litically",
+      "after": "politically",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "cen- tury",
+      "after": "century",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "Ko- rean",
+      "after": "Korean",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "con- tours",
+      "after": "contours",
+      "reason": "The upgraded extractor/parser already produces this corrected form in the fresh parsed baseline; retaining the older candidate would double-apply the repair."
+    },
+    {
+      "before": "lean- ings-those",
+      "after": "leanings—those",
+      "reason": "The upgraded extractor/parser changed the damaged surface form; a source-verified manual repair now targets the exact fresh-baseline text."
+    }
+  ]
+}

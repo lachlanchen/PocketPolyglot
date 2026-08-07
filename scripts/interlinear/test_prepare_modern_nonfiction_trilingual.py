@@ -3,12 +3,14 @@
 
 from __future__ import annotations
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
 from prepare_modern_nonfiction_trilingual import (
+    apply_parsed_source_repair_ledger,
     apply_source_exact_replacements,
     canonical_chapter_title,
     clean_line,
@@ -20,6 +22,7 @@ from prepare_modern_nonfiction_trilingual import (
     is_heading_line,
     is_recovered_index_entry,
     join_proven_page_continuations,
+    normalize_recovered_list_item,
     parse_chapters,
     repair_embedded_text_artifacts,
     split_english_timeline_entries,
@@ -30,6 +33,56 @@ from prepare_modern_nonfiction_trilingual import (
 
 
 class IllustratedNonfictionPreparationTest(unittest.TestCase):
+    def test_parsed_source_repairs_are_exact_and_preserve_figure_metadata(self) -> None:
+        chapters = [
+            {
+                "number": 1,
+                "title": "Chapter",
+                "paragraphs": [
+                    {
+                        "text": "The name was Hidevoshi.",
+                        "figures": [{"path": "figure.png"}],
+                    },
+                    {"text": "Hidevoshi returned."},
+                ],
+            }
+        ]
+        ledger = {
+            "schema_version": 1,
+            "book_id": "test-book",
+            "stage": "parsed_paragraphs",
+            "repairs": [
+                {
+                    "before": "Hidevoshi",
+                    "after": "Hideyoshi",
+                    "expected_count": 2,
+                    "category": "romanization",
+                    "evidence": "Both printed occurrences were checked.",
+                }
+            ],
+        }
+        task = {
+            "book_id": "test-book",
+            "source_parsed_repair_ledger": "data/source-repairs/test-book.json",
+        }
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            ledger_path = root / task["source_parsed_repair_ledger"]
+            ledger_path.parent.mkdir(parents=True)
+            ledger_path.write_text(json.dumps(ledger), encoding="utf-8")
+            with patch("prepare_modern_nonfiction_trilingual.ROOT", root):
+                repaired = apply_parsed_source_repair_ledger(chapters, task)
+                self.assertEqual(
+                    [entry["text"] for entry in repaired[0]["paragraphs"]],
+                    ["The name was Hideyoshi.", "Hideyoshi returned."],
+                )
+                self.assertEqual(
+                    repaired[0]["paragraphs"][0]["figures"],
+                    [{"path": "figure.png"}],
+                )
+                with self.assertRaises(RuntimeError):
+                    apply_parsed_source_repair_ledger(repaired, task)
+
     def test_source_exact_replacements_require_evidence_and_expected_count(self) -> None:
         task = {
             "book_id": "test-book",
@@ -356,10 +409,40 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
             self.assertEqual(parts[2]["caption"], "Second")
             self.assertEqual(parts[3], "After")
 
+    def test_escaped_caption_bracket_remains_a_figure_anchor(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            markdown = Path(temporary) / "source-reviewed.md"
+            markdown.write_text("", encoding="utf-8")
+            parts = split_markdown_line_figures(
+                r"![Fig. 2. detail from \]urakutei-zu](figure.png)",
+                markdown,
+            )
+            self.assertEqual(len(parts), 1)
+            self.assertEqual(parts[0]["caption"], r"Fig. 2. detail from \]urakutei-zu")
+            self.assertTrue(parts[0]["path"].endswith("figure.png"))
+
+    def test_marker_hyphen_page_asset_records_source_page(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            markdown = Path(temporary) / "source-reviewed.md"
+            markdown.write_text("", encoding="utf-8")
+            parts = split_markdown_line_figures(
+                "![Map](assets/page-0213-block-000-image-01.jpg)",
+                markdown,
+            )
+            self.assertEqual(parts[0]["source_page_index"], 213)
+
     def test_literal_footnote_mark_survives_markdown_cleanup(self) -> None:
         self.assertEqual(
             clean_markdown_line(r"resourceful kind of ape,\* while climate changed"),
             "resourceful kind of ape,* while climate changed",
+        )
+
+    def test_punctuation_spacing_preserves_decimals_abbreviations_and_times(self) -> None:
+        self.assertEqual(
+            repair_embedded_text_artifacts(
+                "I.e., value 1.1 at 6:30;then continue.Next sentence."
+            ),
+            "I.e., value 1.1 at 6:30; then continue. Next sentence.",
         )
 
     def test_page_split_prose_is_joined_only_with_strong_evidence(self) -> None:
@@ -389,6 +472,38 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
                 "",
                 "lowercase text beneath a heading.",
             ],
+        )
+
+    def test_page_split_list_item_continuation_is_joined(self) -> None:
+        self.assertEqual(
+            join_proven_page_continuations(
+                [
+                    "- Item [8]: Depending on the domain, you should set",
+                    "",
+                    "aside two areas for rewards.",
+                    "",
+                    "- Item [9]: A complete item.",
+                ]
+            ),
+            [
+                "- Item [8]: Depending on the domain, you should set aside two areas for rewards.",
+                "",
+                "- Item [9]: A complete item.",
+            ],
+        )
+
+    def test_page_split_list_hyphen_is_dehyphenated(self) -> None:
+        self.assertEqual(
+            join_proven_page_continuations(
+                ["- Item [6]: The matter is not re-", "", "solved by this order."]
+            ),
+            ["- Item [6]: The matter is not resolved by this order."],
+        )
+
+    def test_recovered_numbered_item_gets_list_marker(self) -> None:
+        self.assertEqual(
+            normalize_recovered_list_item("Item [9]: Follow the order."),
+            "- Item [9]: Follow the order.",
         )
 
     def test_front_matter_figures_are_not_attached_to_first_body_paragraph(self) -> None:

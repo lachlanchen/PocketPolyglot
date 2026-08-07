@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OCR source repair candidates",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["scope", "repairs", "uncertain"],
+  "properties": {
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repairs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["before", "after", "category", "confidence", "reason"],
+        "properties": {
+          "before": {
+            "type": "string",
+            "minLength": 1
+          },
+          "after": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "broken_word",
+              "punctuation",
+              "romanization",
+              "heading",
+              "duplicate_text",
+              "other"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium"]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "uncertain": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "reason"],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

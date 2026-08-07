@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "book_id": "hideyoshi-berry",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_scholarly_biography_en_spine",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/japan-history/sengoku/biographies/hideyoshi/en/Hideyoshi - Mary Elizabeth Berry.pdf"
+  },
+  "source_reference_paths": {
+    "ja_primary_searchable": "sources/japan-history/sengoku/primary-sources/taikoki/ja-book/太閤記-小瀬甫庵.pdf",
+    "ja_wikisource_manifest": "sources/japan-history/sengoku/primary-sources/taikoki/ja-wikisource/manifest.json"
+  },
+  "source_sha256": {
+    "en": "2e71adad91d9c37384a9eae6e0aac588ba06afc311d53cba7b72920ad2a275c9"
+  },
+  "source_extraction": {
+    "en_cache": "books/hideyoshi-berry/work/source-extraction/marker-surya-hybrid/hybrid.md",
+    "note": "Illustrated nonfiction uses the validated exact Marker Markdown and preserves ordered figure anchors; ordinary PDF uses pdftotext and EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/hideyoshi-berry/markdown/en.md"
+  },
+  "book_title_en": "Hideyoshi",
+  "book_title_zh": "丰臣秀吉",
+  "book_title_ja": "豊臣秀吉",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Mary Elizabeth Berry",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "en_spine_with_declared_supplemental_references",
+  "chunks_jsonl": "books/hideyoshi-berry/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/hideyoshi-berry/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/hideyoshi-berry/work/trilingual/interlinear/chunks",
+  "preview_json": "books/hideyoshi-berry/work/trilingual/preview/hideyoshi-berry.partial.json",
+  "assembled_json": "books/hideyoshi-berry/work/trilingual/preview/hideyoshi-berry.partial.json",
+  "prepared_at": "2026-08-07T15:03:11.734267+00:00",
+  "queue_id": "sengoku-history-trilingual-2026-08-01",
+  "queue_model": "gpt-5.6-sol",
+  "queue_reasoning": "low",
+  "chunk_count": 283,
+  "figure_count": 15,
+  "figure_manifest": "books/hideyoshi-berry/work/trilingual/assets/figure-manifest.json",
+  "english_chapter_count": 9,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "source_spine": "en source text is the immutable chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "Preserve a Chinese source spine exactly when configured; otherwise generate readable modern Chinese from the declared spine.",
+    "japanese_reference": "Preserve a Japanese source spine exactly when configured; otherwise generate natural modern Japanese from the declared spine.",
+    "reference_notes": "Berry is the scholarly spine. The early-modern Taikōki is contextual primary literature, not a sentence-equivalent modern Japanese edition."
+  }
+}

@@ -34,13 +34,14 @@ ROOT = Path(__file__).resolve().parents[2]
 SPACE_RE = re.compile(r"\s+")
 LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 TAG_RE = re.compile(r"<[^>]+>")
+MARKDOWN_IMAGE_CAPTION = r"(?P<caption>(?:\\.|[^\\\]])*)"
 MARKDOWN_IMAGE_LINE_RE = re.compile(
-    r"^\s*!\[(?P<caption>[^\]]*)\]\((?P<path>[^)\n]+)\)\s*$"
+    rf"^\s*!\[{MARKDOWN_IMAGE_CAPTION}\]\((?P<path>[^)\n]+)\)\s*$"
 )
 MARKDOWN_IMAGE_RE = re.compile(
-    r"!\[(?P<caption>[^\]]*)\]\((?P<path>[^)\n]+)\)"
+    rf"!\[{MARKDOWN_IMAGE_CAPTION}\]\((?P<path>[^)\n]+)\)"
 )
-MARKER_PAGE_RE = re.compile(r"(?:^|[-_/])_?page_(?P<page>\d+)(?:_|[-/.])", re.I)
+MARKER_PAGE_RE = re.compile(r"(?:^|[-_/])_?page[-_](?P<page>\d+)(?:_|[-/.])", re.I)
 PAGE_NUMBER_RE = re.compile(r"^(?:[-–—]?\s*)?(?:\d{1,5}|[ivxlcdm]{1,10})(?:\s*[-–—]?)?$", re.I)
 RUNNING_HEADER_RE = re.compile(
     r"^(?:"
@@ -78,8 +79,7 @@ URL_ONLY_RE = re.compile(
 )
 INLINE_URL_RE = re.compile(
     r"(?:https?://|www\.)[^\s<>\[\]{}\"']+|"
-    r"\b(?:[A-Za-z0-9-]{2,}\.)+[A-Za-z]{2,}(?:/[^\s<>\[\]{}\"']*)?",
-    re.I,
+    r"\b(?:[A-Za-z0-9-]{2,}\.)+[a-z]{2,}(?:/[^\s<>\[\]{}\"']*)?",
 )
 OCR_METADATA_RE = re.compile(
     r"^(?:source_pdf|conversion|generated_at|total_pdf_pages|ocr_|title):\s+",
@@ -210,7 +210,20 @@ def repair_embedded_text_artifacts(text: str) -> str:
         return f"POCKETPOLYGLOTURLTOKEN{len(protected_urls) - 1}ENDTOKEN"
 
     text = INLINE_URL_RE.sub(protect_url, text)
-    text = PUNCT_SPACE_RE.sub(r"\1 ", text)
+    def restore_punctuation_space(match: re.Match[str]) -> str:
+        punct = match.group(1)
+        following = match.group(2)
+        previous = match.string[match.start() - 1] if match.start() else ""
+        if punct == "." and (
+            (previous.isdigit() and following.isdigit())
+            or (previous.isalpha() and following.islower())
+        ):
+            return punct
+        if punct == ":" and previous.isdigit() and following.isdigit():
+            return punct
+        return punct + " "
+
+    text = PUNCT_SPACE_RE.sub(restore_punctuation_space, text)
     text = re.sub(
         r"(?P<punct>[.!?][\"”’]?)(?P<note>\d{1,3})(?=\s+[A-Z])",
         lambda match: f"{match.group('punct')}[{match.group('note')}]",
@@ -319,6 +332,29 @@ def sha256(path: Path) -> str:
 def write_json(path: Path, data: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def write_chapters_markdown(
+    path: Path,
+    *,
+    title: str,
+    chapters: list[dict[str, Any]],
+) -> None:
+    output = [f"# {title}", ""]
+    for chapter in chapters:
+        output.extend([f"## {chapter['title']}", ""])
+        for paragraph_entry in chapter["paragraphs"]:
+            if isinstance(paragraph_entry, dict):
+                output.append(str(paragraph_entry.get("text") or ""))
+                for figure in paragraph_entry.get("figures") or []:
+                    output.append(
+                        f"![{figure.get('caption', '')}]({figure.get('path', '')})"
+                    )
+            else:
+                output.append(str(paragraph_entry))
+        output.append("")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(output).strip() + "\n", encoding="utf-8")
 
 
 def source_to_markdown(task: dict[str, Any]) -> Path:
@@ -783,6 +819,17 @@ def is_recovered_index_entry(text: str) -> bool:
     return re.fullmatch(r".{2,180}\s+—\s+\d{1,4}", text) is not None
 
 
+def normalize_recovered_list_item(line: str) -> str:
+    """Restore a Markdown list marker lost at a source-page boundary."""
+
+    stripped = line.lstrip()
+    if stripped.startswith("- "):
+        return line
+    if re.match(r"^(?:Item\s+\[\d+\]|Addendum):", stripped):
+        return "- " + stripped
+    return line
+
+
 def join_proven_page_continuations(lines: list[str]) -> list[str]:
     """Join prose paragraphs split only by a source-page boundary.
 
@@ -798,11 +845,21 @@ def join_proven_page_continuations(lines: list[str]) -> list[str]:
         return (
             not stripped
             or stripped.startswith(("#", "|", ">", "```", "~~~"))
+            or stripped.startswith("![")
             or re.match(r"^(?:[-+*]|\d+[.)])\s+", stripped) is not None
             or stripped.startswith("POCKETPOLYGLOT_FIGURE_ANCHOR_")
         )
 
     def can_join(previous: str, following: str) -> bool:
+        previous_stripped = previous.lstrip()
+        following_stripped = following.lstrip()
+        if (
+            previous_stripped.startswith("- ")
+            and not structural(following)
+            and not SENTENCE_END_RE.search(previous)
+        ):
+            first_letter = next((char for char in following_stripped if char.isalpha()), "")
+            return bool(first_letter and first_letter.islower())
         if structural(previous) or structural(following):
             return False
         if len(previous) < 24 or len(following) < 8:
@@ -835,7 +892,10 @@ def join_proven_page_continuations(lines: list[str]) -> list[str]:
             and next_index < len(lines)
             and can_join(joined[-1], lines[next_index])
         ):
-            joined[-1] = compact(f"{joined[-1]} {lines[next_index]}")
+            if joined[-1].endswith("-"):
+                joined[-1] = compact(f"{joined[-1][:-1]}{lines[next_index]}")
+            else:
+                joined[-1] = compact(f"{joined[-1]} {lines[next_index]}")
             index = next_index + 1
             continue
 
@@ -1232,6 +1292,99 @@ def apply_source_exact_replacements(text: str, task: dict[str, Any]) -> str:
     return text
 
 
+def apply_parsed_source_repair_ledger(
+    chapters: list[dict[str, Any]],
+    task: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Apply reviewed exact repairs after line joining and paragraph parsing.
+
+    OCR defects can be introduced or exposed by page-continuation joining, so
+    some repairs cannot be expressed against the raw extraction.  Keep those
+    task-specific rules in a reviewed ledger and require exact occurrence
+    counts before changing any paragraph text.
+    """
+
+    ledger_value = str(task.get("source_parsed_repair_ledger") or "").strip()
+    if not ledger_value:
+        return chapters
+    ledger_path = Path(ledger_value)
+    if not ledger_path.is_absolute():
+        ledger_path = ROOT / ledger_path
+    if not ledger_path.is_file():
+        raise FileNotFoundError(f"parsed source repair ledger not found: {ledger_path}")
+    ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+    if ledger.get("book_id") != task.get("book_id"):
+        raise ValueError(
+            "parsed source repair ledger book_id does not match task: "
+            f"{ledger.get('book_id')!r} != {task.get('book_id')!r}"
+        )
+    if ledger.get("stage") != "parsed_paragraphs":
+        raise ValueError("parsed source repair ledger stage must be 'parsed_paragraphs'")
+    rules = ledger.get("repairs")
+    if not isinstance(rules, list) or not rules:
+        raise ValueError("parsed source repair ledger needs a non-empty repairs array")
+
+    paragraphs = [
+        paragraph
+        for chapter in chapters
+        for paragraph in chapter.get("paragraphs", [])
+        if isinstance(paragraph, dict)
+    ]
+    report_rows: list[dict[str, Any]] = []
+    for index, rule in enumerate(rules, start=1):
+        if not isinstance(rule, dict):
+            raise ValueError(f"parsed source repair {index} must be an object")
+        before = str(rule.get("before") or "")
+        after = str(rule.get("after") or "")
+        evidence = str(rule.get("evidence") or "").strip()
+        if not before or not after:
+            raise ValueError(f"parsed source repair {index} needs before and after text")
+        if not evidence:
+            raise ValueError(f"parsed source repair {index} needs source evidence")
+        if "expected_count" not in rule:
+            raise ValueError(f"parsed source repair {index} needs expected_count")
+        expected = int(rule["expected_count"])
+        if expected < 1:
+            raise ValueError(f"parsed source repair {index} expected_count must be positive")
+        actual = sum(str(paragraph.get("text") or "").count(before) for paragraph in paragraphs)
+        if actual != expected:
+            raise RuntimeError(
+                f"parsed source repair {index} expected {expected} occurrences of "
+                f"{before!r}, found {actual}"
+            )
+        for paragraph in paragraphs:
+            paragraph["text"] = str(paragraph.get("text") or "").replace(before, after)
+        report_rows.append(
+            {
+                "before": before,
+                "after": after,
+                "count": actual,
+                "category": str(rule.get("category") or "other"),
+                "evidence": evidence,
+                "source_pages": rule.get("source_pages", []),
+            }
+        )
+
+    report_path = (
+        ROOT
+        / "books"
+        / str(task["book_id"])
+        / "work/source-extraction/source-parsed-correction-report.json"
+    )
+    write_json(
+        report_path,
+        {
+            "schema_version": 1,
+            "book_id": task["book_id"],
+            "stage": "parsed_paragraphs",
+            "ledger": str(ledger_path.relative_to(ROOT)),
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "replacements": report_rows,
+        },
+    )
+    return chapters
+
+
 def split_markdown_line_figures(
     raw_line: str,
     markdown: Path,
@@ -1270,7 +1423,11 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
         raw_line = promote_task_markdown_heading(raw_line, task)
         for part in split_markdown_line_figures(raw_line, markdown):
             if isinstance(part, str):
-                lines.append(clean_line(part, title, spine_lang, task))
+                lines.append(
+                    normalize_recovered_list_item(
+                        clean_line(part, title, spine_lang, task)
+                    )
+                )
                 continue
             token = f"POCKETPOLYGLOT_FIGURE_ANCHOR_{len(figure_tokens) + 1:06d}"
             part["source_order"] = len(figure_tokens) + 1
@@ -1595,22 +1752,19 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
     raw_md = source_to_markdown(task)
     chapters = parse_chapters(raw_md, task, max_unit_chars=args.max_unit_chars)
     book_root = ROOT / "books" / task["book_id"]
+    parsed_baseline_path = book_root / "work/source-extraction/parsed-before-repairs.md"
+    write_chapters_markdown(
+        parsed_baseline_path,
+        title=source_title(task),
+        chapters=chapters,
+    )
+    chapters = apply_parsed_source_repair_ledger(chapters, task)
     markdown_path = book_root / f"markdown/{spine_lang}.md"
-    markdown_path.parent.mkdir(parents=True, exist_ok=True)
-    markdown_out = [f"# {source_title(task)}", ""]
-    for chapter in chapters:
-        markdown_out.extend([f"## {chapter['title']}", ""])
-        for paragraph_entry in chapter["paragraphs"]:
-            if isinstance(paragraph_entry, dict):
-                markdown_out.append(str(paragraph_entry.get("text") or ""))
-                for figure in paragraph_entry.get("figures") or []:
-                    markdown_out.append(
-                        f"![{figure.get('caption', '')}]({figure.get('path', '')})"
-                    )
-            else:
-                markdown_out.append(str(paragraph_entry))
-        markdown_out.append("")
-    markdown_path.write_text("\n".join(markdown_out).strip() + "\n", encoding="utf-8")
+    write_chapters_markdown(
+        markdown_path,
+        title=source_title(task),
+        chapters=chapters,
+    )
 
     manifest, chunks = build_chunks(task, chapters, max_chunk_chars=args.max_chunk_chars)
     min_chunks = int(task.get("min_chunk_count", 1))

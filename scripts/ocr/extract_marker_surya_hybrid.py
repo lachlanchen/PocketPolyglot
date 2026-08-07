@@ -43,6 +43,7 @@ TEXT_BLOCK_TYPES = {
     "Equation",
 }
 IGNORED_BLOCK_TYPES = {"PageHeader", "PageFooter"}
+CONTAINER_BLOCK_TYPES = {"FigureGroup", "ListGroup", "PictureGroup"}
 KEEP_LINEBREAK_HYPHENS = {
     "as-yet",
     "blossom-viewing",
@@ -116,6 +117,77 @@ def strip_html(value: str) -> str:
     text = re.sub(r"\s+([’'](?:s|t|re|ve|ll|d|m)\b)", r"\1", text, flags=re.I)
     text = re.sub(r"\s+([’'])(?=\s)", r"\1", text)
     return text
+
+
+def html_table_to_markdown(value: str) -> str:
+    """Preserve a Marker HTML table as semantic Markdown rows.
+
+    Marker sometimes emits a short decorative/noise row above the real header
+    and may split one logical row across two physical rows.  Remove only the
+    unambiguous short noise row and merge only complementary wrapped rows.
+    A one-row table is usually a misclassified caption, so retain it as plain
+    text for the evidence-ledger repair stage.
+    """
+
+    soup = BeautifulSoup(html.unescape(value or ""), "html.parser")
+    table = soup.find("table")
+    if table is None:
+        return strip_html(value)
+    rows: list[list[str]] = []
+    for row in table.find_all("tr"):
+        cells = [
+            re.sub(r"\s+", " ", cell.get_text(" ", strip=True)).strip()
+            for cell in row.find_all(["th", "td"], recursive=False)
+        ]
+        if cells and any(cells):
+            rows.append(cells)
+    if not rows:
+        return ""
+    if len(rows) == 1:
+        return " ".join(cell for cell in rows[0] if cell)
+
+    width = max(len(row) for row in rows)
+    rows = [row + [""] * (width - len(row)) for row in rows]
+    if (
+        len(rows) >= 2
+        and sum(bool(cell) for cell in rows[0]) <= 2
+        and all(len(cell) <= 2 for cell in rows[0] if cell)
+        and sum(bool(cell) for cell in rows[1]) >= 3
+    ):
+        rows.pop(0)
+
+    merged: list[list[str]] = []
+    index = 0
+    while index < len(rows):
+        current = rows[index]
+        if index + 1 < len(rows):
+            following = rows[index + 1]
+            current_tail_empty = all(not cell for cell in current[2:])
+            following_starts_empty = not following[0]
+            following_supplies_tail = any(following[2:])
+            if current_tail_empty and following_starts_empty and following_supplies_tail:
+                current = [
+                    " ".join(part for part in (left, right) if part).strip()
+                    for left, right in zip(current, following)
+                ]
+                index += 1
+        merged.append(current)
+        index += 1
+
+    def escaped(cell: str) -> str:
+        return cell.replace("|", r"\|")
+
+    header = merged[0]
+    body = merged[1:]
+    markdown = [
+        "| " + " | ".join(escaped(cell) for cell in header) + " |",
+        "| " + " | ".join("---" for _ in header) + " |",
+    ]
+    markdown.extend(
+        "| " + " | ".join(escaped(cell) for cell in row) + " |"
+        for row in body
+    )
+    return "\n".join(markdown)
 
 
 def bbox(value: Any) -> tuple[float, float, float, float] | None:
@@ -456,6 +528,57 @@ def decode_block_images(
     return outputs
 
 
+def flatten_output_blocks(blocks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Expand ordered Marker containers without duplicating their contents.
+
+    Marker stores list items, grouped pictures, and grouped captions below a
+    container block.  Treating only top-level page children as output blocks
+    silently drops those descendants.  Tables remain atomic because their
+    parent HTML preserves the row structure and their cells would otherwise be
+    emitted twice.
+    """
+
+    flattened: list[dict[str, Any]] = []
+    for block in blocks:
+        block_type = str(block.get("block_type") or "")
+        children = [
+            child
+            for child in block.get("children") or []
+            if isinstance(child, dict)
+        ]
+        if block_type in {"FigureGroup", "PictureGroup"} and children:
+            captions = [
+                str(child.get("html") or "")
+                for child in children
+                if child.get("block_type") == "Caption"
+            ]
+            image_children = [
+                child
+                for child in children
+                if child.get("block_type") in {"Figure", "Picture"}
+            ]
+            if image_children:
+                for child in image_children:
+                    enriched = dict(child)
+                    enriched["_group_caption_html"] = " ".join(captions)
+                    flattened.append(enriched)
+                flattened.extend(
+                    flatten_output_blocks(
+                        [
+                            child
+                            for child in children
+                            if child.get("block_type") not in {"Caption", "Figure", "Picture"}
+                        ]
+                    )
+                )
+                continue
+        if block_type in CONTAINER_BLOCK_TYPES and children:
+            flattened.extend(flatten_output_blocks(children))
+            continue
+        flattened.append(block)
+    return flattened
+
+
 def marker_pages(payload: dict[str, Any]) -> list[dict[str, Any]]:
     pages = [
         item
@@ -518,7 +641,10 @@ def merge_outputs(
         page_index = int(page_match.group(1)) if page_match else page_offset
         page_box = bbox(m_page.get("bbox")) or (0.0, 0.0, 432.0, 648.0)
         ocr_lines = scale_surya_lines(s_page, page_box)
-        blocks = [item for item in m_page.get("children", []) if isinstance(item, dict)]
+        top_level_blocks = [
+            item for item in m_page.get("children", []) if isinstance(item, dict)
+        ]
+        blocks = flatten_output_blocks(top_level_blocks)
         assignments: dict[int, list[dict[str, Any]]] = {index: [] for index in range(len(blocks))}
 
         for line in ocr_lines:
@@ -547,16 +673,22 @@ def merge_outputs(
             if block_type in IGNORED_BLOCK_TYPES:
                 continue
             image_paths = decode_block_images(block, asset_dir, page_index, block_index)
+            image_caption = strip_html(str(block.get("_group_caption_html") or ""))
+            image_caption = image_caption.replace("\\", "\\\\").replace("]", r"\]")
             for image_path in image_paths:
                 relative = image_path.relative_to(output_dir).as_posix()
-                markdown_lines.extend((f"![]({relative})", ""))
+                markdown_lines.extend((f"![{image_caption}]({relative})", ""))
                 image_count += 1
                 output_blocks += 1
             if block_type not in TEXT_BLOCK_TYPES:
                 continue
             selected = sorted(assignments.get(block_index, []), key=lambda item: item["order"])
             surya_text = join_ocr_lines([item["text"] for item in selected])
-            marker_text = strip_html(str(block.get("html") or ""))
+            marker_text = (
+                html_table_to_markdown(str(block.get("html") or ""))
+                if block_type == "Table"
+                else strip_html(str(block.get("html") or ""))
+            )
             block_box = bbox(block.get("bbox"))
             if (
                 block_type == "SectionHeader"
@@ -565,7 +697,10 @@ def merge_outputs(
                 and re.fullmatch(r"\d+[.]?\s+.{1,80}", marker_text or surya_text)
             ):
                 continue
-            if marker_text and surya_text:
+            if block_type == "Table":
+                text = marker_text
+                fallback_blocks += 1
+            elif marker_text and surya_text:
                 text = fuse_marker_surya_text(marker_text, surya_text)
                 fused_blocks += 1
             elif marker_text:

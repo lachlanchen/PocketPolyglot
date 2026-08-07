@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "queue_id": "sengoku-history-trilingual-2026-08-01",
-  "status": "quality_gated_running",
+  "status": "partially_chunked",
   "description": "Quality-ranked PocketPolyglot queue for user-supplied Sengoku history, primary-source translation, reference works, and historical novels.",
   "model": "gpt-5.6-sol",
   "reasoning": "low",
@@ -549,8 +549,111 @@
           "after": "the nō theater",
           "expected_count": 1,
           "evidence": "Visual inspection of printed page 3 confirms the romanized Japanese term nō; the long-o diacritic was lost in both OCR outputs."
+        },
+        {
+          "before": "Popular sources recount, however unscrupulously, that as many as 250,000 laborers participated in the Fushimi project. To\n\nThe accounts acquire",
+          "after": "Popular sources recount, however unscrupulously, that as many as 250,000 laborers participated in the Fushimi project.[76]\n\nThe accounts acquire",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 147 ends the Fushimi sentence with note 76 and begins The accounts as a new paragraph; To is a duplicated OCR fragment."
+        },
+        {
+          "before": "work. The claimed at least 62,120 men from twenty-eight daimyo for that work. It have ordered the lords",
+          "after": "work.[77] Later, in a letter to Kikkawa Hiroie, he remarked upon the construction at Fushimi: \"I have ordered the lords",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 147 supplies note 77, the attribution to Kikkawa Hiroie, and the opening quotation omitted by both OCR streams."
+        },
+        {
+          "before": "these.\" Although we cannot reconstruct",
+          "after": "these.\"[78] Although we cannot reconstruct",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 147 prints note 78 immediately after the closing quotation."
+        },
+        {
+          "before": "generated enormous ac-\n\n<!-- source_page_index=147 -->\n\ntivity in",
+          "after": "generated enormous activity\n\n<!-- source_page_index=147 -->\n\nin",
+          "expected_count": 1,
+          "evidence": "The printed word activity crosses physical pages 147-148; the page-aware extraction retained the page boundary inside the word."
+        },
+        {
+          "before": "ended at the Oda borders",
+          "after": "ended at the Oda borders.",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 51 ends the Imagawa section with a period before the Oda Nobunaga heading."
+        },
+        {
+          "before": "mortuary temple. Saka Castle and Hōjō Ujimasa—they also describe his mortuary temple.",
+          "after": "mortuary temple.",
+          "expected_count": 1,
+          "evidence": "The second clause is an OCR duplication assembled from the preceding Sakai Castle and Hōjō Ujimasa sentence; the printed page contains it only once."
+        },
+        {
+          "before": "\\]urakutei-zu",
+          "after": "Jurakutei-zu",
+          "expected_count": 1,
+          "evidence": "The Figure 2 caption on physical PDF page 211 prints Jurakutei-zu; Marker escaped an OCR-misread closing bracket inside the image alt text."
+        },
+        {
+          "before": "Item f [5]]",
+          "after": "Item [5]",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 71 prints Item [5]; the extra f and bracket are OCR noise in the recovered list item."
+        },
+        {
+          "before": "(be perceived as]",
+          "after": "[be perceived as]",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 71 prints an editorial square-bracket insertion; OCR misread its opening bracket."
+        },
+        {
+          "before": "Item [[2]): Superior paddies",
+          "after": "Item [2]: Superior paddies",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 128 prints Item [2]; the duplicated opening bracket and closing parenthesis are OCR defects."
+        },
+        {
+          "before": "koku, l to; and very inferior paddy",
+          "after": "koku, 1 to; and very inferior paddy",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 128 and the parallel 1.5/1.3 sequence establish the final value as numeral 1, not lowercase l."
+        },
+        {
+          "before": "[by the magistrate).",
+          "after": "[by the magistrate].",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 128 uses an editorial square bracket; OCR confused the closing glyph with a parenthesis."
+        },
+        {
+          "before": "Another improvement in the Toyotomi surveys, indicated by items",
+          "after": "Another improvement in the Toyotomi surveys, indicated by items one and nine of the 1594 instructions, was the establishment of universal standards of line, area, and volume measures.[35]",
+          "expected_count": 1,
+          "evidence": "Physical PDF pages 129-130 show this sentence interrupted by Table 1; the continuation and note 35 resume after the table."
+        },
+        {
+          "before": "one and nine of the 1594 instructions, was the establishment of universal standards of line, area, and volume measures.[35] Ordering his surveyors",
+          "after": "Ordering his surveyors",
+          "expected_count": 1,
+          "evidence": "The interrupted sentence is restored before Table 1; this removes only its now-duplicated continuation from physical PDF page 130."
+        },
+        {
+          "before": "Further, value was sometimes expressed in cash and sometimes in rice within the same domain. Statements of washing the same domain.",
+          "after": "Further, value was sometimes expressed in cash and sometimes in rice within the same domain.",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 127 ends the preceding sentence at 'within the same domain.'; this appended phrase is an OCR duplication with one corrupted word."
+        },
+        {
+          "before": "I able e ] i. I Part ot a kenchi registe r from 1594.",
+          "after": "Table 1. Part of a kenchi register from 1594.",
+          "expected_count": 1,
+          "evidence": "Physical PDF page 129 prints the caption 'Table 1. Part of a kenchi register from 1594.'; Marker split and misrecognized its letterforms."
         }
       ],
+      "source_line_replacements": {
+        "## 2.2.4 Hideyoshi": "",
+        "### Tokugawa Ieyasu continued:": "Tokugawa Ieyasu continued:",
+        "Statements of washing the same domain.": ""
+      },
+      "source_parsed_repair_ledger": "books/hideyoshi-berry/work/source-qa-v3/accepted-repairs.json",
+      "preserve_front_matter_figures": true,
       "reference_paths": {
         "ja_primary_searchable": "sources/japan-history/sengoku/primary-sources/taikoki/ja-book/太閤記-小瀬甫庵.pdf",
         "ja_wikisource_manifest": "sources/japan-history/sengoku/primary-sources/taikoki/ja-wikisource/manifest.json"
@@ -575,14 +678,14 @@
       "split_terminal_back_matter": false,
       "source_preparation": "Marker layout and figure anchors fused with full-book Surya OCR; strict evidence-ledger corrections repair shared OCR defects before chunking.",
       "reference_notes": "Berry is the scholarly spine. The early-modern Taikōki is contextual primary literature, not a sentence-equivalent modern Japanese edition.",
-      "status": "prepared_source_qa_required",
-      "launchable": false,
+      "status": "chunked_launchable",
+      "launchable": true,
       "preparation_blocker": "The Marker/Surya hybrid is complete and chunked, but the evidence-ledger source QA must finish repairing remaining romanization and OCR word errors before the two-chunk model pilot.",
       "book_plan": "books/hideyoshi-berry/book-plan.json",
       "chunks_manifest": "books/hideyoshi-berry/work/trilingual/chunks/manifest.json",
-      "chunk_count": 280,
+      "chunk_count": 283,
       "english_chapter_count": 9,
-      "prepared_chunks_at": "2026-08-01T22:45:27.616178+00:00"
+      "prepared_chunks_at": "2026-08-07T15:03:11.735346+00:00"
     },
     {
       "priority": 4,
@@ -930,5 +1033,5 @@
       "prepared_chunks_at": "2026-08-01T22:54:51.247278+00:00"
     }
   ],
-  "last_chunk_preparation_at": "2026-08-01T22:54:51.247301+00:00"
+  "last_chunk_preparation_at": "2026-08-07T15:03:11.735363+00:00"
 }
