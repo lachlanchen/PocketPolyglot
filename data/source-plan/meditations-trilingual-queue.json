@@ -1,12 +1,20 @@
 {
   "schema_version": 1,
   "queue_id": "meditations-trilingual-20260803",
-  "status": "chunked_launchable",
-  "execution_status": "not_started",
+  "status": "running",
+  "execution_status": "running",
   "autostart": false,
   "model": "gpt-5.6-sol",
   "reasoning": "low",
   "workers": 3,
+  "runtime": {
+    "started_at": "2026-08-07T19:32:12+08:00",
+    "session": "zhjpbook-meditations-marcus-aurelius-gpt56-low",
+    "repair_session": "zhjpbook-meditations-marcus-aurelius-gpt56-low-repair",
+    "autorepair_session": "zhjpbook-meditations-marcus-aurelius-gpt56-low-autorepair",
+    "merge_interval_seconds": 60,
+    "compile_interval_seconds": 1200
+  },
   "task_family": "philosophy_en_jp_zh",
   "source_spine_lang": "en",
   "output_languages": [
@@ -65,9 +73,9 @@
         "grammar": "Assign normalized grammar roles to all three languages; keep English word spacing intact.",
         "validation": "Reject missing numbered sections, Gutenberg boilerplate, editorial back matter, HTML fragments, non-Japanese Japanese output, ungrounded commentary, and source-order changes."
       },
-      "status": "chunked_launchable",
+      "status": "running",
       "launchable": true,
-      "execution_status": "not_started",
+      "execution_status": "running",
       "autostart": false,
       "book_plan": "books/meditations-marcus-aurelius/book-plan.json",
       "chunks_manifest": "books/meditations-marcus-aurelius/work/trilingual/chunks/manifest.json",

@@ -30,11 +30,23 @@ passages incrementally without deleting generated data.
 - Queue: `data/source-plan/meditations-trilingual-queue.json`
 - Book id: `meditations-marcus-aurelius`
 - Queue position: first (`priority: 1`, `queue_position: 1`)
-- Execution policy: prepared only (`autostart: false`); do not launch workers
+- Execution policy: manual launch only (`autostart: false`)
 - Source boundary: `THE FIRST BOOK` through the end of `THE TWELFTH BOOK`
 - Model preference: `gpt-5.6-sol`, low reasoning
 - Worker preference: `3`
-- Generation is intentionally not started by task preparation.
+- Task preparation itself does not start generation.
+
+## Runtime
+
+The prepared task was started manually on 2026-08-07 at 19:32 HKT with three
+workers, `gpt-5.6-sol`, and low reasoning. The persistent sessions are:
+
+- writer: `zhjpbook-meditations-marcus-aurelius-gpt56-low`;
+- stall repair: `zhjpbook-meditations-marcus-aurelius-gpt56-low-repair`;
+- autorepair: `zhjpbook-meditations-marcus-aurelius-gpt56-low-autorepair`.
+
+The launch remains resumable and does not enable queue autostart for any other
+book.
 
 Completion requires current-manifest coverage with no missing or stale chunks,
 all twelve books in order, strict trilingual JSON validation, a meaningful TOC,
@@ -54,4 +66,4 @@ Final prepared state:
 - 144 stable chunks (`c0001` through `c0144`);
 - 600 unique source paragraph ids with no duplication;
 - no appendix, notes, glossary, Gutenberg boilerplate, or HTML fragments;
-- no writer, reviewer, or model process started.
+- no writer, reviewer, or model process was started by the preparation step.
