@@ -16,6 +16,8 @@ PocketPolyglot turns bilingual texts into ruby, pinyin, grammar-colored, line-al
 
 The repository is a toolkit: TeX templates, Python scripts, JSON schemas, preview assets, and sample data. Bring your own rights-cleared source texts before publishing full generated books.
 
+PocketPolyglot is also the study-companion stage of the [fixed USD 250 Bilingual Lecture Pack](https://lazying.art/lecture-pack/?utm_source=github&utm_medium=repository&utm_campaign=bilingual_lecture_pack_pilot&utm_content=pocketpolyglot_readme) for one rights-cleared English lecture.
+
 ## Support PocketPolyglot
 
 | Donate | PayPal | Stripe |
